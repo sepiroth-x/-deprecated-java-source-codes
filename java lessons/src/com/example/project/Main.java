@@ -3,7 +3,6 @@ package com.example.project;
  * For Java Programming Course lesson discussion
  * Feel free to modify this source code
  * **/
-import java.sql.SQLOutput;
 
 public class Main {
 
