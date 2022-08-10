@@ -11,8 +11,8 @@ public class Main {
     public static void main(String[] args) {
 
         Player newPlayer = new Player();
-        Scanner console = new Scanner(System.in);
         String playerName;
+        Scanner console = new Scanner(System.in);
         System.out.println("Please enter your name: ");
         playerName = console.nextLine();
         newPlayer.setName(playerName);
@@ -22,6 +22,7 @@ public class Main {
         newPlayer.setDexterity(5);
         newPlayer.setSpirit(5);
         newPlayer.setStamina(8);
+        newPlayer.setSchoolName("Vagrant");
 
         System.out.println("Player name: " + newPlayer.getName());
         System.out.println("Skills Learned: " + newPlayer.getNumOfSkills());
@@ -30,6 +31,9 @@ public class Main {
         System.out.println("Dexterity: " + newPlayer.getDexterity());
         System.out.println("Spirit: " + newPlayer.getSpirit());
         System.out.println("Stamina: " + newPlayer.getStamina());
+
+
+
 
     }
 
