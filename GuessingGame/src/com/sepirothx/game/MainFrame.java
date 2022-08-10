@@ -12,6 +12,7 @@ public class MainFrame extends JFrame{
     private JLabel labelInputIndicator;
     private JButton btnGuess;
     private JLabel labelAnswer;
+    private JButton btnRestart;
 
 
     public MainFrame () {
@@ -41,6 +42,7 @@ public class MainFrame extends JFrame{
 
                         gameOver = true;
 
+
                     } else {
                         labelMessageBox.setText("Wrong Guess!");
                         tfGuess.setText("");
@@ -56,7 +58,20 @@ public class MainFrame extends JFrame{
 
             }
         });
-      }
+
+
+        btnRestart.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                tfGuess.setText("");
+                labelAnswer.setText("");
+                labelMessageBox.setText("TRY YOUR LUCK!");
+                answerNumber = randNumber.nextInt(10);
+
+            }
+        });
+    }
 
 
     public static void main(String[] args) {
