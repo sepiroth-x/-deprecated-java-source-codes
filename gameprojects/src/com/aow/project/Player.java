@@ -9,7 +9,7 @@ import java.util.Scanner;
  * License: Creative Commons, feel free to modify the source code to your preference
  * **/
 
-public class Player extends MainSchools{
+public class Player implements skillSets {
     String name;
     String schoolJoined;
     int numOfSkills = 0,
@@ -87,7 +87,12 @@ public class Player extends MainSchools{
     public Player(){
         System.out.println("New Player Created!");
 
+
    }
+
+    public void throwDart(){
+        System.out.println("Throw dart in forward direction");
+    }
 
 }
 
