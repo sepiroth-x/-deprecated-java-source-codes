@@ -13,6 +13,7 @@ public class MainFrame extends JFrame{
     private JButton btnGuess;
     private JLabel labelAnswer;
     private JButton btnRestart;
+    private JLabel labelAttempts;
 
 
     public MainFrame () {
@@ -22,30 +23,34 @@ public class MainFrame extends JFrame{
         setSize(450,300);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
+        setLocationRelativeTo(null);
 
         int answerNumber;
         Random randNumber = new Random();
         answerNumber = randNumber.nextInt(10);
 
-
         btnGuess.addActionListener(new ActionListener() {
+            int counter = 0;
             @Override
             public void actionPerformed(ActionEvent e) {
                 boolean gameOver = false;
+
+
                 do {
                     String guessNumber = tfGuess.getText();
                     int guessNumberToInt = Integer.parseInt(guessNumber);
+                    counter++;
 
                     if (guessNumberToInt == answerNumber) {
-                        labelAnswer.setText("Correct Answer: " + answerNumber);
+                        labelAnswer.setText(""+answerNumber);
                         labelMessageBox.setText("You got the correct answer!");
-
+                        labelAttempts.setText("Attempts: " + counter);
                         gameOver = true;
 
 
                     } else {
                         labelMessageBox.setText("Wrong Guess!");
-                        tfGuess.setText("");
+                        tfGuess.setText(null);
 
                         if(guessNumberToInt > answerNumber){
                             labelMessageBox.setText("Guess lower! Try again!");
@@ -53,21 +58,24 @@ public class MainFrame extends JFrame{
                             labelMessageBox.setText("Guess higher! Try again!");
                         }
                     }
+
                 }while(!gameOver);
 
 
             }
         });
 
-
         btnRestart.addActionListener(new ActionListener() {
+
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                tfGuess.setText("");
-                labelAnswer.setText("");
+                tfGuess.setText(null);
+                labelAnswer.setText(null);
+                labelAttempts.setText(null);
                 labelMessageBox.setText("TRY YOUR LUCK!");
-                answerNumber = randNumber.nextInt(10);
+                //TODO: Fix this part of the code
+                
 
             }
         });
