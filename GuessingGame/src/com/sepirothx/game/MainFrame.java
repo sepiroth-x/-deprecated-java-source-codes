@@ -12,7 +12,7 @@ public class MainFrame extends JFrame{
     private JLabel labelInputIndicator;
     private JButton btnGuess;
     private JLabel labelAnswer;
-    private JButton btnRestart;
+    private JButton btnExit;
     private JLabel labelAttempts;
 
 
@@ -33,10 +33,7 @@ public class MainFrame extends JFrame{
             int counter = 0;
             @Override
             public void actionPerformed(ActionEvent e) {
-                boolean gameOver = false;
 
-
-                do {
                     String guessNumber = tfGuess.getText();
                     int guessNumberToInt = Integer.parseInt(guessNumber);
                     counter++;
@@ -45,7 +42,8 @@ public class MainFrame extends JFrame{
                         labelAnswer.setText(""+answerNumber);
                         labelMessageBox.setText("You got the correct answer!");
                         labelAttempts.setText("Attempts: " + counter);
-                        gameOver = true;
+                        btnGuess.setEnabled(false);
+                        tfGuess.setEnabled(false);
 
 
                     } else {
@@ -59,23 +57,16 @@ public class MainFrame extends JFrame{
                         }
                     }
 
-                }while(!gameOver);
-
-
             }
         });
 
-        btnRestart.addActionListener(new ActionListener() {
+        btnExit.addActionListener(new ActionListener() {
+
 
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                tfGuess.setText(null);
-                labelAnswer.setText(null);
-                labelAttempts.setText(null);
-                labelMessageBox.setText("TRY YOUR LUCK!");
-                //TODO: Fix this part of the code
-                
+                System.exit(0);
 
             }
         });
