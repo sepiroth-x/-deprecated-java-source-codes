@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0483baf-8d00-4ef3-a933-0b5bfc00df0e" name="Changes" comment="" />
+    <list default="true" id="f0483baf-8d00-4ef3-a933-0b5bfc00df0e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../GuessingGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GuessingGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GuessingGame/out/production/GuessingGame/com/sepirothx/game/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GuessingGame/out/production/GuessingGame/com/sepirothx/game/MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GuessingGame/src/com/sepirothx/game/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GuessingGame/src/com/sepirothx/game/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,12 +34,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Jahnkaren/Documents/GitHub/java-source-codes/tiktaktoe"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="MainForm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sepirothx.tiktaktoe.MainForm" />

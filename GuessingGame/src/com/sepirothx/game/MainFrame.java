@@ -20,7 +20,7 @@ public class MainFrame extends JFrame{
 
         setContentPane(mainPanel);
         setTitle("Guessing Game");
-        setSize(450,300);
+        setSize(550,300);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
         setLocationRelativeTo(null);
