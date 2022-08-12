@@ -30,7 +30,7 @@ public class Main {
                    System.out.println("Products of: " + (inputArray[i] - 2) + " & " + (inputArray[counter] - 3) + " is " + productArray[i]);
                    counter++;
 
-                   //TODO: Fix the loop cycle ....
+                   //TODO: Fix the loop cycle .... to be continued
            }
 
 
