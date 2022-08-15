@@ -46,6 +46,24 @@ public class Calculator extends JFrame {
 
             }
         });
+
+        jbtn2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String resultString = tfResult.getText(); //unsay data sa textfield ibutang niya sa variable
+                tfResult.setText(resultString + jbtn2.getText());//ibutang ang btn text (2) sa text field
+
+            }
+        });
+
+        jbtn3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String resultString = tfResult.getText(); //unsay data sa textfield ibutang niya sa variable
+                tfResult.setText(resultString + jbtn3.getText());//ibutang ang btn text (3) sa text field
+
+            }
+        });
     }
 
     public static void main(String[] args) {
