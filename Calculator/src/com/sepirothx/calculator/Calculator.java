@@ -1,9 +1,11 @@
 package com.sepirothx.calculator;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Calculator extends JFrame {
-    private JTextField textField1;
+    private JTextField tfResult;
     private JButton jbtn1;
     private JButton jbtnmultiply;
     private JButton jbtn3;
@@ -20,12 +22,34 @@ public class Calculator extends JFrame {
     private JButton jbtnequals;
     private JPanel calculatorPanel;
 
+    int firstNumber, secondNumber;
+    float result;
+
     public Calculator(){
 
         setContentPane(calculatorPanel);
         setTitle("Calculator");
-        setSize("");
+        setSize(250,210);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setVisible(true);
 
+
+        jbtn1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO:
+                String resultString = tfResult.getText(); //unsay data sa textfield ibutang niya sa variable
+                tfResult.setText(resultString + jbtn1.getText());//ibutang ang btn text (1) sa text field
+
+
+
+            }
+        });
+    }
+
+    public static void main(String[] args) {
+        Calculator cal1 = new Calculator();
 
     }
 
